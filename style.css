@@ -1,0 +1,151 @@
+html, body {
+  background:#282828;
+  font-family: "Fantasque Sans Mono";
+  color: #EADBB2;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 460px 600px 1fr;
+  grid-template-areas:
+    ". left right .";
+  column-gap: 80px;
+  justify-items: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.left-container {
+  grid-area: left;
+  aspect-ratio: 1/1;
+}
+
+.right-container {
+  grid-area: right;
+  height: 50%;
+  width: 100%;
+}
+
+.gif img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  padding-top: 60px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+}
+
+.bookmarks {
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+li {
+  font-size: 16px;
+  list-style-type: none;
+  padding: 5px
+}
+
+a:link {
+  text-decoration: none;
+  color: #D63A3E;
+}
+
+a:visited {
+  color: #CA8A8B;
+}
+
+a:hover {
+  color: #999B84;
+}
+
+.blinking {
+  animation: opacity 1s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+}
+
+#searchBox:hover{
+    box-shadow: 0px 0px 8px 1px var(--text-color);
+}
+
+#searchBox:focus-within{
+    box-shadow: 0px 0px 8px 1px var(--text-color);
+    outline:none;
+}
+
+.search {
+    background: #EFE9DB;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 5px solid #272727;
+    outline: none;
+    position: absolute;
+    width: 52.1%;
+    height: 7.4%;
+    min-width: 300px;
+    min-height: 80px;
+    top: 86%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    padding-left: 20px;
+    z-index: 1;
+}
+
+.search_shadow {
+    background: #272727;
+    border-radius: 15px;
+    border: 5px solid #272727;
+    outline: none;
+    position: absolute;
+    width: 51.6%;
+    height: 6.6%;
+    min-width: 300px;
+    min-height: 80px;
+    top: 87%;
+    left: 60.5%;
+    transform: translate(-50%, -50%);
+}
